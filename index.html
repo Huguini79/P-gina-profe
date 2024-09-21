@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregador de personas por Hugo González Ruiz(yo) 1 ESO D</title>
+</head>
+<body>
+    <label>Introduce una persona:</label><br><br>
+    <input id="entrada" type="text"><br><br>
+    <button onclick="Añadir()" style="height: 22px; width: 330px;">Añadir persona</button><br><br>
+    <button onclick="Mostrar_persona_aleatoria()" style="height: 22px; width: 330px;">Mostrar persona aleatoria</button>
+    <script>
+        let personas = [];
+        function Añadir() {
+            personas.push(document.getElementById("entrada").value);
+        }
+        function Mostrar_persona_aleatoria() {
+            let indiceAletorio = Math.floor(Math.random() * personas.length);
+            let per_ale = personas[indiceAletorio];
+            alert("Persona aleatoria: "+ per_ale);
+        }
+    </script>
+</body>
+</html>
